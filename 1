@@ -1,0 +1,70 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+    int user_score = 0;
+    int computer_score = 0;
+    int total_rounds = 5;
+
+    printf("Welcome to Penalty Shootout Game!\n");
+
+    for (int round = 1; round <= total_rounds; round++) 
+    {
+        printf("\nRound %d\n", round);
+
+        // User's turn
+        printf("Your turn (Enter 1 for left, 2 for center, 3 for right): ");
+        int user_choice;
+        scanf("%d", &user_choice);
+
+        // Generate a random number forcomputer's choice (1-3)
+        int computer_choice = 1 + rand() % 3;
+        printf("Computer chose: %d\n", computer_choice);
+
+        if (user_choice == computer_choice)
+        {
+            printf("Goalkeeper saved it! No goal.\n");
+        } 
+        else 
+        {
+            printf("Goal! You scored!\n");
+            user_score++;
+        }
+
+        // Computer's turn
+        computer_choice = 1 + rand() % 3;
+        printf("Computer's turn: %d\n", computer_choice);
+
+        // Generate a random number foruser's choice (1-3)
+        printf("Your turn (Enter 1 for left, 2 for center, 3 for right): ");
+        scanf("%d", &user_choice);
+
+        if (user_choice == computer_choice)
+        {
+            printf("You saved it! No goal.\n");
+        } 
+        else 
+        {
+            printf("Goal! Computer scored!\n");
+            computer_score++;
+        }
+
+        printf("Score: You %d - %d Computer\n", user_score, computer_score);
+    }
+
+    // Determine the winner
+    if (user_score > computer_score)
+    {
+        printf("You win the penalty shootout!\n");
+    } 
+    else if (user_score < computer_score)
+    {
+        printf("Computer wins the penalty shootout!\n");
+    }
+    else 
+    {
+        printf("It's a draw! The game ends in a tie.\n");
+    }
+
+    return 0;
+}

@@ -10,20 +10,23 @@ int main() {
     printf("\t\t\t\t\t|\t      KICKS      \t| \n");
     printf("\t\t\t\t\t---------------------------------\n");
 
-    printf("Simple rules for our game :) \n");
-    printf("1.There will be 5 rounds of penalty shootout.\n");
-    printf("2.Each round contains 2 parts :\n");
-    printf("a) Shooting.\n");
-    printf("b) Saving.\n");
+    printf("Simple rules for our game :) \n\n");
+    
+    printf("1.There will be 5 rounds of penalty shootout.\n\n");
+    
+    printf("2.Each round contains 2 parts : Shooting and Saving.\n\n");
+    
     printf("a)For shooting user will have to choose from three options Left , Right or Centre.\n");
-    printf("Similarly Computer will randomly choose from above three options for saving our penalty.\n");
-    printf("b)For saving also we have to repeat the same process and accordinly the scores of each round will be shown.\n");
+    printf("  Similarly Computer will randomly choose from above three options for saving our penalty.\n");
+    printf("b)For saving also we have to repeat the same process and accordinly the scores of each round will be shown.\n\n");
+    
     printf("3.In this way 5 rounds will be done and winner wil be announced based on the final score.\n\n");
+    
     printf("Press 1 for Left.\n");
     printf("Press 2 for Centre.\n");
-    printf("Press 3 for Right.\n");
-    printf("We hope you guys enjoy our game!\n");
-
+    printf("Press 3 for Right.\n\n");
+    
+    printf("\t\t\t\t\t We hope you guys enjoy our game!\n");
 
     for (int round = 1; round <= total_rounds; round++)
     {
@@ -86,17 +89,18 @@ int main() {
     }
     else
     {
-        printf("It's a draw! The game ends in a tie.\n");
+        printf("It's a draw! The game ends in a tie.\n\n");
     }
+
+    printf("\t\t\t\t\t Thank you for playing our game!\n\n");
 
     printf("\t\t\t\t\t---------------------------------\n");
     printf("\t\t\t\t\t|\t     CREDITS      \t| \n");
     printf("\t\t\t\t\t---------------------------------\n");
-    
-    
 
-
+    printf("\t\t\t\t\t        ~~~ Soham Baing ~~~\n");
+    printf("\t\t\t\t\t     ~~~ Mitesh Chaurasiya ~~~\n");
+    printf("\t\t\t\t\t        ~~~ Swayam Desai ~~~\n");
 
     return 0;
 }
-
